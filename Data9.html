@@ -8,23 +8,23 @@
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawVisualization);
-        google.charts.setOnLoadCallback(drawJigawa);
-        google.charts.setOnLoadCallback(drawEdo);
-        google.charts.setOnLoadCallback(drawKebbi);
+        google.charts.setOnLoadCallback(drawBayelsa);
+        google.charts.setOnLoadCallback(drawKatsina);
+        google.charts.setOnLoadCallback(drawDelta);
+        google.charts.setOnLoadCallback(drawAkwaIbom);
 
-        function drawVisualization() {
+        function drawBayelsa() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 21, 146, 60, 29],
-                ['Question 2', 169, 45, 13, 29],
-                ['Question 3', 170, 43, 14, 29],
-                ['Question 4', 150, 51, 20, 29]
+                ['Question 1', 4, 60, 76, 34],
+                ['Question 2', 88, 1, 51, 34],
+                ['Question 3', 89, 1, 50, 34],
+                ['Question 4', 89, 1, 50, 34]
             ]);
 
             var options = {
-                title: 'ABUJA',
+                title: 'Bayelsa',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -39,21 +39,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('Bayelsa_div'));
             chart.draw(data, options);
         }
 
-        function drawJigawa() {
+        function drawKatsina() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 10, 198, 0, 73],
-                ['Question 2', 207, 1, 0, 73],
-                ['Question 3', 207, 1, 0, 73],
-                ['Question 4', 207, 1, 0, 73]
+                ['Question 1', 12, 194, 77, 36],
+                ['Question 2', 213, 11, 58, 36],
+                ['Question 3', 212, 11, 59, 36],
+                ['Question 4', 215, 9, 58, 36]
             ]);
 
             var options = {
-                title: 'JIGAWA',
+                title: 'Katsina',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -68,21 +68,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Jigawa_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('Katsina_div'));
             chart.draw(data, options);
         }
 
-        function drawEdo() {
+        function drawDelta() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 3, 113, 12, 72],
-                ['Question 2', 122, 3, 3, 72],
-                ['Question 3', 117, 6, 5, 72],
-                ['Question 4', 102, 4, 22, 72]
+                ['Question 1', 1, 204, 0, 94],
+                ['Question 2', 205, 0, 0, 94],
+                ['Question 3', 205, 0, 0, 94],
+                ['Question 4', 205, 0, 0, 94]
             ]);
 
             var options = {
-                title: 'Edo',
+                title: 'Delta',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -97,21 +97,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Edo_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('Delta_div'));
             chart.draw(data, options);
         }
 
-        function drawKebbi() {
+        function drawAkwaIbom() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 0, 179, 1, 80],
-                ['Question 2', 179, 0, 1, 80],
-                ['Question 3', 179, 0, 1, 80],
-                ['Question 4', 179, 0, 1, 80]
+                ['Question 1', 5, 152, 18, 48],
+                ['Question 2', 171, 2, 2, 48],
+                ['Question 3', 171, 2, 2, 48],
+                ['Question 4', 138, 0, 36, 48]
             ]);
 
             var options = {
-                title: 'Kebbi',
+                title: 'Akwa Ibom',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -126,98 +126,9 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Kebbi_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('AkwaIbom_div'));
             chart.draw(data, options);
         }
-
-        function drawAdamawa() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Adamawa',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Adamawa_div'));
-            chart.draw(data, options);
-        }
-
-
-        function drawKaduna() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Kaduna',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Kaduna_div'));
-            chart.draw(data, options);
-        }
-
-        function drawAbia() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Abia',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Abia_div'));
-            chart.draw(data, options);
-        }
-
     </script>
 </head>
 
@@ -267,16 +178,16 @@
     <table class="columns">
         <tr>
             <td>
-                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                <div id="Bayelsa_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 600 <br> People Unavailable - 341</p>
+                        <p>Total No. of calls - 450 <br> People Unavailable - 276</p>
                 </div>
             </td>
 
             <td>
-                <div id="Jigawa_div" style="width: 900px; height: 500px;"></div>
+                <div id="Katsina_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 590 <br> People Unavailable - 359</p>
+                        <p>Total No. of calls - 769 <br> People Unavailable - 440</p>
                 </div>
             </td>
         </tr>
@@ -285,21 +196,19 @@
     <table class="columns">
             <tr>
                     <td>
-                            <div id="Edo_div" style="width: 900px; height: 500px;"></div>
+                            <div id="Delta_div" style="width: 900px; height: 500px;"></div>
                             <div class="container text-center">
-                                    <p>Total No. of calls - 581 <br> People Unavailable - 382</p>
+                                    <p>Total No. of calls - 754 <br> People Unavailable - 455</p>
                             </div>
                         </td>
                         <td>
-                                <div id="Kebbi_div" style="width: 900px; height: 500px;"></div>
+                                <div id="AkwaIbom_div" style="width: 900px; height: 500px;"></div>
                                 <div class="container text-center">
-                                        <p>Total No. of calls - 742 <br> People Unavailable - 377</p>
+                                        <p>Total No. of calls - 752 <br> People Unavailable - 530</p>
                                 </div>
                             </td>
                 </tr>
             </table>
-
-        
 
                             <script src="vendor/jquery/jquery.min.js"></script>
                             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
