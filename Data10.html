@@ -10,18 +10,20 @@
         });
         google.charts.setOnLoadCallback(drawBayelsa);
         google.charts.setOnLoadCallback(drawKatsina);
+        google.charts.setOnLoadCallback(drawAkwaIbom);
 
         function drawBayelsa() {
+            // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
-['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-['Question 1', 10, 23, 7, 16],
-['Question 2', 35, 2, 3, 16],
-['Question 3', 35, 2, 3, 16],
-['Question 4', 35, 2, 3, 16]
-]);
+                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
+                ['Question 1', 1, 108, 113, 39],
+                ['Question 2', 153, 1, 68, 39],
+                ['Question 3', 153, 1, 68, 39],
+                ['Question 4', 153, 1, 68, 39]
+            ]);
 
             var options = {
-                title: 'BAYELSA',
+                title: 'Bayelsa',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -43,14 +45,14 @@
         function drawKatsina() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 1, 29, 0, 4],
-                ['Question 2', 30, 0, 0, 4],
-                ['Question 3', 30, 0, 0, 4],
-                ['Question 4', 30, 0, 0, 4]
+                ['Question 1', 5, 166, 50, 18],
+                ['Question 2', 174, 7, 40, 18],
+                ['Question 3', 175, 7, 39, 18],
+                ['Question 4', 174, 7, 40, 18]
             ]);
 
             var options = {
-                title: 'KATSINA',
+                title: 'Katsina',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -66,6 +68,37 @@
             };
 
             var chart = new google.visualization.ComboChart(document.getElementById('Katsina_div'));
+            chart.draw(data, options);
+        }
+
+       
+
+        function drawAkwaIbom() {
+            var data = google.visualization.arrayToDataTable([
+                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
+                ['Question 1', 3, 122, 9, 47],
+                ['Question 2', 130, 2, 2, 47],
+                ['Question 3', 130, 2, 2, 47],
+                ['Question 4', 102, 1, 31, 47]
+            ]);
+
+            var options = {
+                title: 'Akwa Ibom',
+                vAxis: {
+                    title: 'Sentiment'
+                },
+                hAxis: {
+                    title: 'Question'
+                },
+                seriesType: 'bars',
+                series: {
+                    5: {
+                        type: 'line'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('AkwaIbom_div'));
             chart.draw(data, options);
         }
     </script>
@@ -119,20 +152,31 @@
             <td>
                 <div id="Bayelsa_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 119 <br> People Unavailable - 60</p>
+                        <p>Total No. of calls - 600 <br> People Unavailable - 356</p>
                 </div>
             </td>
 
             <td>
                 <div id="Katsina_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 131 <br> People Unavailable - 66</p>
+                        <p>Total No. of calls - 600 <br> People Unavailable - 361</p>
                 </div>
             </td>
         </tr>
     </table>
 
-  
+    <table class="columns">
+            <tr>
+                    
+                        <td>
+                                <div id="AkwaIbom_div" style="width: 900px; height: 500px;"></div>
+                                <div class="container text-center">
+                                        <p>Total No. of calls - 600 <br> People Unavailable - 419</p>
+                                </div>
+                            </td>
+                </tr>
+            </table>
+
                             <script src="vendor/jquery/jquery.min.js"></script>
                             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                           

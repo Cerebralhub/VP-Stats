@@ -15,15 +15,16 @@
         google.charts.setOnLoadCallback(drawAdamawa);
         google.charts.setOnLoadCallback(drawKaduna);
         google.charts.setOnLoadCallback(drawAbia);
+        google.charts.setOnLoadCallback(drawKebbi);
 
         function drawVisualization() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 5, 54, 21, 15],
-                ['Question 2', 66, 6, 8, 0],
-                ['Question 3', 66, 5, 9, 0],
-                ['Question 4', 67, 4, 10, 0]
+                ['Question 1', 47, 107, 27, 15],
+                ['Question 2', 113, 56, 12, 15],
+                ['Question 3', 113, 49, 19, 15],
+                ['Question 4', 111, 57, 13, 15]
             ]);
 
             var options = {
@@ -49,10 +50,10 @@
         function drawJigawa() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 25, 85, 4, 79],
+                ['Question 2', 112, 2, 2, 79],
+                ['Question 3', 112, 2, 2, 79],
+                ['Question 4', 112, 2, 2, 79]
             ]);
 
             var options = {
@@ -78,10 +79,10 @@
         function drawEdo() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 4, 104, 11, 36],
+                ['Question 2', 113, 6, 0, 36],
+                ['Question 3', 114, 4, 1, 36],
+                ['Question 4', 91, 2, 26, 36]
             ]);
 
             var options = {
@@ -107,10 +108,10 @@
         function drawOsun() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 47, 70, 38, 57],
+                ['Question 2', 58, 58, 37, 57],
+                ['Question 3', 68, 55, 37, 57],
+                ['Question 4', 74, 54, 30, 57]
             ]);
 
             var options = {
@@ -136,10 +137,10 @@
         function drawAdamawa() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 50, 49, 36, 42],
+                ['Question 2', 58, 48, 29, 42],
+                ['Question 3', 60, 45, 30, 42],
+                ['Question 4', 61, 47, 27, 42]
             ]);
 
             var options = {
@@ -166,10 +167,10 @@
         function drawKaduna() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 7, 26, 14, 25],
+                ['Question 2', 10, 17, 0, 25],
+                ['Question 3', 10, 1, 16, 25],
+                ['Question 4', 8, 7, 12, 25]
             ]);
 
             var options = {
@@ -195,14 +196,14 @@
         function drawAbia() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 39, 43, 29, 32],
+                ['Question 2', 31, 32, 16, 32],
+                ['Question 3', 35, 26, 18, 32],
+                ['Question 4', 31, 33, 15, 32]
             ]);
 
             var options = {
-                title: 'Abia',
+                title: 'ABIA',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -220,6 +221,36 @@
             var chart = new google.visualization.ComboChart(document.getElementById('Abia_div'));
             chart.draw(data, options);
         }
+
+        function drawKebbi() {
+            var data = google.visualization.arrayToDataTable([
+                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
+                ['Question 1', 1, 123, 12, 43],
+                ['Question 2', 115, 5, 17, 43],
+                ['Question 3', 119, 3, 114, 43],
+                ['Question 4', 100, 0, 36, 43]
+            ]);
+
+            var options = {
+                title: 'KEBBI',
+                vAxis: {
+                    title: 'Sentiment'
+                },
+                hAxis: {
+                    title: 'Question'
+                },
+                seriesType: 'bars',
+                series: {
+                    5: {
+                        type: 'line'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('Kebbi_div'));
+            chart.draw(data, options);
+        }
+
 
     </script>
 </head>
@@ -272,14 +303,14 @@
             <td>
                 <div id="chart_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 200 <br> People Unavailable - 105</p>
+                        <p>Total No. of calls - 500 <br> People Unavailable - 307</p>
                 </div>
             </td>
 
             <td>
                 <div id="Jigawa_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 210 <br> People Unavailable - 136</p>
+                        <p>Total No. of calls - 524 <br> People Unavailable - 329</p>
                 </div>
             </td>
         </tr>
@@ -290,13 +321,13 @@
                     <td>
                             <div id="Edo_div" style="width: 900px; height: 500px;"></div>
                             <div class="container text-center">
-                                    <p>Total No. of calls - 201 <br> People Unavailable - 129</p>
+                                    <p>Total No. of calls - 505 <br> People Unavailable - 343</p>
                             </div>
                         </td>
                         <td>
                                 <div id="Osun_div" style="width: 900px; height: 500px;"></div>
                                 <div class="container text-center">
-                                        <p>Total No. of calls - 190 <br> People Unavailable - 38</p>
+                                        <p>Total No. of calls - 273 <br> People Unavailable - 61</p>
                                 </div>
                             </td>
                 </tr>
@@ -307,13 +338,13 @@
                             <td>
                                     <div id="Adamawa_div" style="width: 900px; height: 500px;"></div>
                                     <div class="container text-center">
-                                            <p>Total No. of calls - 140 <br> People Unavailable - 33</p>
+                                            <p>Total No. of calls - 236 <br> People Unavailable - 59</p>
                                     </div>
                                 </td>
                                 <td>
                                         <div id="Kaduna_div" style="width: 900px; height: 500px;"></div>
                                         <div class="container text-center">
-                                                <p>Total No. of calls - 55 <br> People Unavailable - 18</p>
+                                                <p>Total No. of calls - 115 <br> People Unavailable - 42</p>
                                         </div>
                                     </td>
                         </tr>
@@ -324,7 +355,14 @@
                                     <td>
                                             <div id="Abia_div" style="width: 900px; height: 500px;"></div>
                                             <div class="container text-center">
-                                                    <p>Total No. of calls - 130 <br> People Unavailable - 31</p>
+                                                    <p>Total No. of calls - 194 <br> People Unavailable - 51</p>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div id="Kebbi_div" style="width: 900px; height: 500px;"></div>
+                                            <div class="container text-center">
+                                                    <p>Total No. of calls - 522 <br> People Unavailable - 340</p>
                                             </div>
                                         </td>
                                 </tr>

@@ -8,26 +8,28 @@
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawVisualization);
+        google.charts.setOnLoadCallback(drawKebbi);
         google.charts.setOnLoadCallback(drawJigawa);
         google.charts.setOnLoadCallback(drawEdo);
         google.charts.setOnLoadCallback(drawOsun);
         google.charts.setOnLoadCallback(drawAdamawa);
         google.charts.setOnLoadCallback(drawKaduna);
         google.charts.setOnLoadCallback(drawAbia);
+        google.charts.setOnLoadCallback(drawAbuja);
+        
 
-        function drawVisualization() {
+        function drawKebbi() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 5, 54, 21, 15],
-                ['Question 2', 66, 6, 8, 0],
-                ['Question 3', 66, 5, 9, 0],
-                ['Question 4', 67, 4, 10, 0]
+                ['Question 1', 1, 123, 12, 43],
+                ['Question 2', 115, 5, 17, 43],
+                ['Question 3', 119, 3, 14, 43],
+                ['Question 4', 100, 0, 36, 43]
             ]);
 
             var options = {
-                title: 'ABUJA',
+                title: 'KEBBI',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -49,10 +51,10 @@
         function drawJigawa() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 25, 85, 4, 79],
+                ['Question 2', 112, 2, 2, 79],
+                ['Question 3', 112, 2, 2, 79],
+                ['Question 4', 112, 2, 2, 79]
             ]);
 
             var options = {
@@ -78,10 +80,10 @@
         function drawEdo() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 4, 104, 11, 36],
+                ['Question 2', 113, 6, 0, 36],
+                ['Question 3', 114, 4, 1, 36],
+                ['Question 4', 91, 2, 26, 36]
             ]);
 
             var options = {
@@ -107,10 +109,10 @@
         function drawOsun() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 47, 70, 38, 57],
+                ['Question 2', 58, 58, 37, 57],
+                ['Question 3', 68, 55, 37, 57],
+                ['Question 4', 74, 54, 30, 57]
             ]);
 
             var options = {
@@ -136,10 +138,10 @@
         function drawAdamawa() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 30, 22, 16, 20],
+                ['Question 2', 27, 32, 9, 20],
+                ['Question 3', 31, 25, 12, 20],
+                ['Question 4', 27, 31, 10, 20]
             ]);
 
             var options = {
@@ -166,10 +168,10 @@
         function drawKaduna() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 16, 19, 15, 18],
+                ['Question 2', 25, 14, 11, 18],
+                ['Question 3', 23, 17, 10, 18],
+                ['Question 4', 28, 12, 10, 18]
             ]);
 
             var options = {
@@ -192,13 +194,42 @@
             chart.draw(data, options);
         }
 
+        function drawAbuja() {
+            var data = google.visualization.arrayToDataTable([
+                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
+                ['Question 1', 30, 190, 54, 24],
+                ['Question 2', 200, 58, 16, 24],
+                ['Question 3', 201, 58, 15, 24],
+                ['Question 4', 169, 76, 29, 24]
+            ]);
+
+            var options = {
+                title: 'ABUJA',
+                vAxis: {
+                    title: 'Sentiment'
+                },
+                hAxis: {
+                    title: 'Question'
+                },
+                seriesType: 'bars',
+                series: {
+                    5: {
+                        type: 'line'
+                    }
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('Abuja_div'));
+            chart.draw(data, options);
+        }
+
         function drawAbia() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 33, 20, 18, 17],
+                ['Question 2', 37, 21, 13, 17],
+                ['Question 3', 35, 23, 13, 17],
+                ['Question 4', 40, 21, 10, 17]
             ]);
 
             var options = {
@@ -272,14 +303,14 @@
             <td>
                 <div id="chart_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 200 <br> People Unavailable - 105</p>
+                        <p>Total No. of calls - 520 <br> People Unavailable - 342</p>
                 </div>
             </td>
 
             <td>
                 <div id="Jigawa_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 210 <br> People Unavailable - 136</p>
+                        <p>Total No. of calls - 524 <br> People Unavailable - 329</p>
                 </div>
             </td>
         </tr>
@@ -290,13 +321,13 @@
                     <td>
                             <div id="Edo_div" style="width: 900px; height: 500px;"></div>
                             <div class="container text-center">
-                                    <p>Total No. of calls - 201 <br> People Unavailable - 129</p>
+                                    <p>Total No. of calls - 505 <br> People Unavailable - 343</p>
                             </div>
                         </td>
                         <td>
                                 <div id="Osun_div" style="width: 900px; height: 500px;"></div>
                                 <div class="container text-center">
-                                        <p>Total No. of calls - 190 <br> People Unavailable - 38</p>
+                                        <p>Total No. of calls - 273 <br> People Unavailable - 61</p>
                                 </div>
                             </td>
                 </tr>
@@ -307,28 +338,36 @@
                             <td>
                                     <div id="Adamawa_div" style="width: 900px; height: 500px;"></div>
                                     <div class="container text-center">
-                                            <p>Total No. of calls - 140 <br> People Unavailable - 33</p>
+                                            <p>Total No. of calls - 110 <br> People Unavailable - 22</p>
                                     </div>
                                 </td>
                                 <td>
                                         <div id="Kaduna_div" style="width: 900px; height: 500px;"></div>
                                         <div class="container text-center">
-                                                <p>Total No. of calls - 55 <br> People Unavailable - 18</p>
+                                                <p>Total No. of calls - 88 <br> People Unavailable - 20</p>
                                         </div>
                                     </td>
                         </tr>
                     </table>
 
                     <table class="columns">
-                            <tr>
+                        <tr>
+                                <td>
+                                        <div id="Abuja_div" style="width: 900px; height: 500px;"></div>
+                                        <div class="container text-center">
+                                                <p>Total No. of calls - 750 <br> People Unavailable - 452</p>
+                                        </div>
+                                    </td>
+
                                     <td>
-                                            <div id="Abia_div" style="width: 900px; height: 500px;"></div>
-                                            <div class="container text-center">
-                                                    <p>Total No. of calls - 130 <br> People Unavailable - 31</p>
-                                            </div>
-                                        </td>
-                                </tr>
-                            </table>
+                                        <div id="Abia_div" style="width: 900px; height: 500px;"></div>
+                                        <div class="container text-center">
+                                                <p>Total No. of calls - 124 <br> People Unavailable - 36</p>
+                                        </div>
+                                    </td>
+                            </tr>
+                        </table>
+
 
                             <script src="vendor/jquery/jquery.min.js"></script>
                             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

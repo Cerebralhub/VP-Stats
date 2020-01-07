@@ -8,26 +8,23 @@
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawVisualization);
-        google.charts.setOnLoadCallback(drawJigawa);
-        google.charts.setOnLoadCallback(drawEdo);
-        google.charts.setOnLoadCallback(drawOsun);
-        google.charts.setOnLoadCallback(drawAdamawa);
-        google.charts.setOnLoadCallback(drawKaduna);
-        google.charts.setOnLoadCallback(drawAbia);
+        google.charts.setOnLoadCallback(drawBayelsa);
+        google.charts.setOnLoadCallback(drawKatsina);
+        google.charts.setOnLoadCallback(drawKebbi);
+        google.charts.setOnLoadCallback(drawAkwaIbom);
 
-        function drawVisualization() {
+        function drawBayelsa() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 5, 54, 21, 15],
-                ['Question 2', 66, 6, 8, 0],
-                ['Question 3', 66, 5, 9, 0],
-                ['Question 4', 67, 4, 10, 0]
+                ['Question 1', 24, 115, 40, 65],
+                ['Question 2', 147, 3, 29, 65],
+                ['Question 3', 147, 3, 29, 65],
+                ['Question 4', 147, 3, 29, 65]
             ]);
 
             var options = {
-                title: 'ABUJA',
+                title: 'BAYELSA',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -42,21 +39,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('bayelsa_div'));
             chart.draw(data, options);
         }
 
-        function drawJigawa() {
+        function drawKatsina() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 3, 187, 18, 25],
+                ['Question 2', 118, 8, 13, 25],
+                ['Question 3', 119, 8, 12, 25],
+                ['Question 4', 174, 11, 23, 25]
             ]);
 
             var options = {
-                title: 'JIGAWA',
+                title: 'KATSINA',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -71,21 +68,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Jigawa_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('katsina_div'));
             chart.draw(data, options);
         }
 
-        function drawEdo() {
+        function drawKebbi() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 0, 124, 0, 15],
+                ['Question 2', 124, 0, 0, 66],
+                ['Question 3', 124, 0, 0, 66],
+                ['Question 4', 124, 0, 0, 66]
             ]);
 
             var options = {
-                title: 'Edo',
+                title: 'KEBBI',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -100,21 +97,21 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Edo_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('kebbi_div'));
             chart.draw(data, options);
         }
 
-        function drawOsun() {
+        function drawAkwaIbom() {
             var data = google.visualization.arrayToDataTable([
                 ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
+                ['Question 1', 1, 114, 9, 42],
+                ['Question 2', 114, 4, 6, 42],
+                ['Question 3', 117, 3, 4, 42],
+                ['Question 4', 99, 3, 22, 42]
             ]);
 
             var options = {
-                title: 'Osun',
+                title: 'AKWA IBOM',
                 vAxis: {
                     title: 'Sentiment'
                 },
@@ -129,95 +126,7 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Osun_div'));
-            chart.draw(data, options);
-        }
-
-        function drawAdamawa() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Adamawa',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Adamawa_div'));
-            chart.draw(data, options);
-        }
-
-
-        function drawKaduna() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Kaduna',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Kaduna_div'));
-            chart.draw(data, options);
-        }
-
-        function drawAbia() {
-            var data = google.visualization.arrayToDataTable([
-                ['Question', 'Yes', 'No', 'No Idea', 'Not Interested'],
-                ['Question 1', 2, 34, 0, 15],
-                ['Question 2', 34, 2, 0, 0],
-                ['Question 3', 34, 2, 0, 0],
-                ['Question 4', 38, 0, 0, 0]
-            ]);
-
-            var options = {
-                title: 'Abia',
-                vAxis: {
-                    title: 'Sentiment'
-                },
-                hAxis: {
-                    title: 'Question'
-                },
-                seriesType: 'bars',
-                series: {
-                    5: {
-                        type: 'line'
-                    }
-                }
-            };
-
-            var chart = new google.visualization.ComboChart(document.getElementById('Abia_div'));
+            var chart = new google.visualization.ComboChart(document.getElementById('akwa_div'));
             chart.draw(data, options);
         }
 
@@ -270,16 +179,16 @@
     <table class="columns">
         <tr>
             <td>
-                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                <div id="bayelsa_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 200 <br> People Unavailable - 105</p>
+                        <p>Total No. of calls - 600 <br> People Unavailable - 356</p>
                 </div>
             </td>
 
             <td>
-                <div id="Jigawa_div" style="width: 900px; height: 500px;"></div>
+                <div id="katsina_div" style="width: 900px; height: 500px;"></div>
                 <div class="container text-center">
-                        <p>Total No. of calls - 210 <br> People Unavailable - 136</p>
+                        <p>Total No. of calls - 600 <br> People Unavailable - 369</p>
                 </div>
             </td>
         </tr>
@@ -288,47 +197,20 @@
     <table class="columns">
             <tr>
                     <td>
-                            <div id="Edo_div" style="width: 900px; height: 500px;"></div>
+                            <div id="kebbi_div" style="width: 900px; height: 500px;"></div>
                             <div class="container text-center">
-                                    <p>Total No. of calls - 201 <br> People Unavailable - 129</p>
+                                    <p>Total No. of calls - 596 <br> People Unavailable - 396</p>
                             </div>
                         </td>
                         <td>
-                                <div id="Osun_div" style="width: 900px; height: 500px;"></div>
+                                <div id="akwa_div" style="width: 900px; height: 500px;"></div>
                                 <div class="container text-center">
-                                        <p>Total No. of calls - 190 <br> People Unavailable - 38</p>
+                                        <p>Total No. of calls - 592 <br> People Unavailable - 426</p>
                                 </div>
                             </td>
                 </tr>
             </table>
 
-            <table class="columns">
-                    <tr>
-                            <td>
-                                    <div id="Adamawa_div" style="width: 900px; height: 500px;"></div>
-                                    <div class="container text-center">
-                                            <p>Total No. of calls - 140 <br> People Unavailable - 33</p>
-                                    </div>
-                                </td>
-                                <td>
-                                        <div id="Kaduna_div" style="width: 900px; height: 500px;"></div>
-                                        <div class="container text-center">
-                                                <p>Total No. of calls - 55 <br> People Unavailable - 18</p>
-                                        </div>
-                                    </td>
-                        </tr>
-                    </table>
-
-                    <table class="columns">
-                            <tr>
-                                    <td>
-                                            <div id="Abia_div" style="width: 900px; height: 500px;"></div>
-                                            <div class="container text-center">
-                                                    <p>Total No. of calls - 130 <br> People Unavailable - 31</p>
-                                            </div>
-                                        </td>
-                                </tr>
-                            </table>
 
                             <script src="vendor/jquery/jquery.min.js"></script>
                             <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
